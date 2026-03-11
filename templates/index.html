@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Demographic Data Input</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen p-4 sm:p-8 font-sans text-gray-800 flex items-center justify-center">
+
+    <div class="w-full max-w-5xl bg-white/20 backdrop-blur-lg border border-white/30 shadow-2xl rounded-3xl p-6 sm:p-10">
+        
+        <h2 class="text-3xl font-extrabold text-white text-center mb-8 drop-shadow-md tracking-wide">
+            Health Data Prediction
+        </h2>
+        
+        <form action="/predict" method="POST">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="flex flex-col">
+                    <label for="adult_mortality" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Adult Mortality</label>
+                    <input type="number" id="adult_mortality" name="adult_mortality" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="infant_deaths" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Infant Deaths</label>
+                    <input type="number" id="infant_deaths" name="infant_deaths" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="alcohol" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Alcohol</label>
+                    <input type="number" id="alcohol" name="alcohol" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="percentage_expenditure" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Percentage Expenditure</label>
+                    <input type="number" id="percentage_expenditure" name="percentage_expenditure" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="hepatitis_b" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Hepatitis B</label>
+                    <input type="number" id="hepatitis_b" name="hepatitis_b" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="measles" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Measles</label>
+                    <input type="number" id="measles" name="measles" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="bmi" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">BMI</label>
+                    <input type="number" id="bmi" name="bmi" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="under_five_deaths" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Under-Five Deaths</label>
+                    <input type="number" id="under_five_deaths" name="under_five_deaths" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="polio" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Polio</label>
+                    <input type="number" id="polio" name="polio" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="total_expenditure" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Total Expenditure</label>
+                    <input type="number" id="total_expenditure" name="total_expenditure" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="diphtheria" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Diphtheria</label>
+                    <input type="number" id="diphtheria" name="diphtheria" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="hiv_aids" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">HIV/AIDS</label>
+                    <input type="number" id="hiv_aids" name="hiv_aids" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="gdp" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">GDP</label>
+                    <input type="number" id="gdp" name="gdp" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="population" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Population</label>
+                    <input type="number" id="population" name="population" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="thinness_1_19" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Thinness 1-19 years</label>
+                    <input type="number" id="thinness_1_19" name="thinness_1_19" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="thinness_5_9" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Thinness 5-9 years</label>
+                    <input type="number" id="thinness_5_9" name="thinness_5_9" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="income_composition" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Income Composition</label>
+                    <input type="number" id="income_composition" name="income_composition" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="schooling" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Schooling</label>
+                    <input type="number" id="schooling" name="schooling" step="any" required 
+                           class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="status_developing" class="mb-1 text-sm font-semibold text-white drop-shadow-sm">Status: Developing</label>
+                    <select id="status_developing" name="status_developing" required 
+                            class="w-full bg-white/40 border border-white/50 rounded-xl px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/70 focus:bg-white/60 transition duration-300 shadow-inner appearance-none cursor-pointer">
+                        <option value="" disabled selected class="text-gray-500">Select an option</option>
+                        <option value="True" class="text-gray-900">True</option>
+                        <option value="False" class="text-gray-900">False</option>
+                    </select>
+                </div>
+
+                <div class="col-span-1 sm:col-span-2 lg:col-span-3 mt-4">
+                    <button type="submit" 
+                            class="w-full bg-white/30 hover:bg-white/50 text-white font-bold text-lg py-4 px-6 rounded-xl border border-white/50 backdrop-blur-md transition duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+                        Submit Data
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
