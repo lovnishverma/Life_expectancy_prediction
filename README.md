@@ -8,6 +8,10 @@
 ## 📌 Overview
 This project is an end-to-end Machine Learning web application designed to predict **Life Expectancy** based on 19 health, economic, and demographic features. It utilizes a pre-trained machine learning model served via a Python Flask backend, coupled with a highly responsive, modern "glassmorphism" frontend built with Tailwind CSS.
 
+Live demo: https://huggingface.co/spaces/LovnishVerma/Life-expectancy-prediction
+
+Render: https://life-expectancy-prediction-saa6.onrender.com/
+
 ## ✨ Features
 * **Predictive Inference:** Uses a saved ML model (`model.joblib`) to instantly process user inputs and return accurate life expectancy estimates.
 * **Modern UI/UX:** Features a stunning, mobile-friendly glassmorphism interface with custom gradients and hover states.
